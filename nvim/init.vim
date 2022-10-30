@@ -21,6 +21,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set number
 set shiftwidth=4
 set tabstop=4
+set scrolloff=8
 
 " Searching
 set incsearch " Incremental search 
