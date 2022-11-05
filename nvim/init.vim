@@ -30,9 +30,6 @@ set hlsearch " Highlight search
 " :term settings 
 set splitbelow " always split below
 
-" Transparent background
-hi Normal guibg=NONE ctermbg=NONE
-
 """"""""""""""""""""
 " vim-plug plugins "
 "                  "
@@ -74,6 +71,9 @@ call plug#end()
 
 " Color scheme
 colorscheme gruvbox
+
+" Transparent background
+hi Normal guibg=NONE ctermbg=NONE
 
 " NERDTree file system explorer settings
 let NERDTreeShowBookmarks=1
