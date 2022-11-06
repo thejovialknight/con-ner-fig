@@ -4,7 +4,6 @@
 " > alias vim="nvim"
 "
 " Install vim-plug package manager
-" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 """"""""""""""""""""
 " General Settings "
@@ -30,86 +29,42 @@ set hlsearch " Highlight search
 " :term settings 
 set splitbelow " always split below
 
-" Vundle stuff
-set nocompatible
-filetype off
-
-""""""""""""""""""
-" Vundle plugins "
-"                "
-""""""""""""""""""
-set rtp+=~/.local/share/nvim/plugged/Vundle.vim
-call vundle#begin()
-
-" Color scheme
-Plugin 'morhetz/gruvbox'
-
-" Language support
-Plugin 'sheerun/vim-polyglot'
-
-" Code completion
-Plugin 'ycm-core/YouCompleteMe'
-
-" File system explorer 
-Plugin 'preservim/nerdtree'
-
-" Source file outliner
-" Required dependency 'Exuberant Ctags'
-" Install via sudo apt install exuberant-ctags
-Plugin 'preservim/tagbar'
-
-" File system search 
-" Requires dependency 'ack'
-" Install via sudo apt install ack
-Plugin 'dyng/ctrlsf.vim'
-
-" File switching between header/implementation files
-Plugin 'derekwyatt/vim-fswitch'
-
-" Pulling prototypes into implementation files 
-Plugin 'derekwyatt/vim-protodef'
-
-call vundle#end()
-
-" More vundle stuff
-filetype plugin indent on
-
 """"""""""""""""""""
 " vim-plug plugins "
 "                  "
 """"""""""""""""""""
 
-" call plug#begin()
+call plug#begin('~/.config/nvim/vim-plugs')
 
 " Color scheme
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Language support
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " Code completion
-" Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " File system explorer 
-" Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 
 " Source file outliner
 " Required dependency 'Exuberant Ctags'
 " Install via sudo apt install exuberant-ctags
-" Plug 'preservim/tagbar'
+Plug 'preservim/tagbar'
 
 " File system search 
 " Requires dependency 'ack'
 " Install via sudo apt install ack
-" Plug 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim'
 
 " File switching between header/implementation files
-" Plug 'derekwyatt/vim-fswitch'
+Plug 'derekwyatt/vim-fswitch'
 
 " Pulling prototypes into implementation files 
-" Plug 'derekwyatt/vim-protodef'
+Plug 'derekwyatt/vim-protodef'
 
-" call plug#end()
+call plug#end()
 
 """""""""""""""""""
 " Plugin settings "
